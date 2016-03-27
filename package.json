@@ -2,7 +2,8 @@
   "name": "typed-event",
   "version": "0.0.0",
   "description": "Typed event written on typescript",
-  "main": "index.js",
+  "main": "./dist/typed_event.js",
+  "typings": "./dist/typed_event.d.ts",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test/*.ts --require ts-node/register",
     "dist": "node ./node_modules/gulp/bin/gulp clean && node ./node_modules/gulp/bin/gulp dist"
