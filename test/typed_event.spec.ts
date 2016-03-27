@@ -1,0 +1,3 @@
+describe("typed_event", () => {
+
+});
