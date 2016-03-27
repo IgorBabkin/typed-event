@@ -1,16 +1,18 @@
 import {expect} from 'chai';
 import {spy} from 'sinon';
-import TypedEvent from "../src/typed_event";
-describe("TypedEvent", () => {
+import TypedEvent from '../src/typed_event';
+describe('TypedEvent', () => {
     var event: TypedEvent<string>;
     let subscriber;
 
     beforeEach(() => {
         event = new TypedEvent<string>();
-        subscriber = (data: string) => {};
+        subscriber = (data: string) => {
+            let t = 1;
+        };
     });
 
-    it("should be available to subscribe", () => {
+    it('should be available to subscribe', () => {
         subscriber = spy(subscriber);
         event.subscribe(subscriber);
         event.raise();
@@ -18,7 +20,7 @@ describe("TypedEvent", () => {
         expect(subscriber.called).to.be.ok;
     });
 
-    it("can't add the same subscriber twice", () => {
+    it('cannot add the same subscriber twice', () => {
         subscriber = spy(subscriber);
         event.subscribe(subscriber);
         event.subscribe(subscriber);
@@ -27,7 +29,7 @@ describe("TypedEvent", () => {
         expect(subscriber.calledOnce).to.be.ok;
     });
 
-    it("should be available to unsubscribe", () => {
+    it('should be available to unsubscribe', () => {
         subscriber = spy(subscriber);
         event.subscribe(subscriber);
         event.unsubscribe(subscriber);
@@ -36,16 +38,16 @@ describe("TypedEvent", () => {
         expect(subscriber.notCalled).to.be.ok;
     });
 
-    it("should provide data to subscriber", () => {
+    it('should provide data to subscriber', () => {
         let providedData = '';
         event.subscribe((data) => {
-            providedData = data
+            providedData = data;
         });
         event.raise('super');
         expect(providedData).to.equal('super');
     });
 
-    it("should provide the same data to all subscribers", () => {
+    it('should provide the same data to all subscribers', () => {
         let providedData1 = '1';
         let providedData2 = '2';
         event.subscribe((data) => {
@@ -56,5 +58,5 @@ describe("TypedEvent", () => {
         });
         event.raise('super');
         expect(providedData1).to.equal(providedData2);
-    })
+    });
 });
