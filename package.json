@@ -8,7 +8,7 @@
     "test": "gulp test",
     "dist": "gulp clean && gulp dist",
     "lint": "gulp lint",
-    "precommit": "npm run-script lint && npm test"
+    "precommit": "npm run-script lint"
   },
   "author": "Igor Babkin <igba14@gmail.com>",
   "license": "ISC",
