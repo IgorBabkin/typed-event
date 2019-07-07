@@ -1,7 +1,7 @@
 import { IObserverStorage } from 'IObserverStorage';
 import { Times } from 'moq.ts';
-import { createMock } from 'test.helpers';
-import { TestObserverStorage } from 'TestObserverStorage';
+import { createMock } from 'test/test.helpers';
+import { TestObserverStorage } from 'test/TestObserverStorage';
 import { TypedEvent } from 'TypedEvent';
 
 describe('TypedEvent tests', () => {

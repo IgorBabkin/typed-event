@@ -1,5 +1,5 @@
-import { IObserverStorage } from './IObserverStorage';
-import { IObserver } from './ISubscriber';
+import { IObserverStorage } from '../IObserverStorage';
+import { IObserver } from '../ISubscriber';
 
 export class TestObserverStorage<T> implements IObserverStorage<T> {
     private observers: Array<IObserver<T>> = [];

@@ -1,0 +1,18 @@
+language: node_js
+
+install:
+    - yarn install
+    
+script:
+    - yarn lint
+    - yarn test
+    - yarn build
+
+before_deploy: "echo 'Deploying: start'"
+
+deploy:
+    provider: npm
+    email: "igba14@gmail.com"
+    api_key: "25ab4bb9-cb67-45d5-b9bd-b4665715e12d"
+    
+after_deploy: "echo 'Deploying: finish'"
