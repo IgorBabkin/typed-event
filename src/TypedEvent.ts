@@ -9,21 +9,21 @@ export class TypedEvent<T> implements ITypedEvent<T> {
         this.observerStorage = observerStorage;
     }
 
-    public subscribe(observer: IObserver<T>): IUnsubscribe {
+    public on(observer: IObserver<T>): IUnsubscribe {
         this.observerStorage.add(observer);
-        return () => this.unsubscribe(observer);
+        return () => this.off(observer);
     }
 
-    public subscribeOnce(observer: IObserver<T>): IUnsubscribe {
+    public once(observer: IObserver<T>): IUnsubscribe {
         const onceObserver: IObserver<T> = (data) => {
             observer(data);
-            this.unsubscribe(onceObserver);
+            this.off(onceObserver);
         };
         this.observerStorage.add(onceObserver);
-        return () => this.unsubscribe(onceObserver);
+        return () => this.off(onceObserver);
     }
 
-    public unsubscribe(observer: IObserver<T>): void {
+    public off(observer: IObserver<T>): void {
         this.observerStorage.remove(observer);
     }
 

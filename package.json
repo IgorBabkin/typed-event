@@ -1,5 +1,5 @@
 {
-  "name": "typed-event",
+  "name": "typescript-event",
   "version": "0.0.2",
   "description": "Typed event written on typescript",
   "main": "./dist/index.js",
