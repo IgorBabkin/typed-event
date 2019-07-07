@@ -1,31 +1,21 @@
 {
   "name": "typed-event",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Typed event written on typescript",
-  "main": "./dist/typed_event.js",
-  "typings": "./dist/typed_event.d.ts",
+  "main": "./dist/typed-event.js",
   "scripts": {
-    "test": "gulp test",
-    "dist": "gulp clean && gulp dist",
-    "lint": "gulp lint",
-    "precommit": "npm run-script lint"
+    "test": "jest",
+    "dist": "tsc",
+    "lint": "tslint ./src/**/*.ts"
   },
   "author": "Igor Babkin <igba14@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-mocha": "^2.2.0",
-    "gulp-tslint": "^4.3.4",
-    "gulp-typescript": "^2.12.1",
-    "husky": "^0.11.4",
-    "jsonfile": "^2.2.3",
-    "merge2": "^1.0.1",
-    "mocha": "^2.4.5",
-    "sinon": "^1.17.3",
-    "ts-node": "^0.7.1",
-    "tslint": "^3.6.0",
-    "typescript": "^1.8.9"
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "moq.ts": "^3.0.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   }
 }
