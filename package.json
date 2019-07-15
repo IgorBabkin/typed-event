@@ -18,7 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.15",
-    "@types/node": "^12.0.12",
+    "@types/node": "^12.6.3",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
     "moq.ts": "^3.0.0",
@@ -26,6 +26,6 @@
     "standard-version": "^6.0.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   }
 }
