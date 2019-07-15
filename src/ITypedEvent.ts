@@ -4,4 +4,5 @@ export interface ITypedEvent<T> {
     once(observer: IObserver<T>): IUnsubscribe;
     off(observer: IObserver<T>): void;
     raise(data: T): void;
+    dispose(): void;
 }

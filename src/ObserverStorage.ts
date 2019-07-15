@@ -15,4 +15,8 @@ export class ObserverStorage<T> implements IObserverStorage<T> {
     public each(handler: (observer: IObserver<T>) => void): void {
         this.observers.forEach(handler);
     }
+
+    public reset(): void {
+        this.observers = [];
+    }
 }

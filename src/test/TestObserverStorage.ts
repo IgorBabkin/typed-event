@@ -19,4 +19,8 @@ export class TestObserverStorage<T> implements IObserverStorage<T> {
     public isEmpty(): boolean {
         return this.observers.length === 0;
     }
+
+    public reset(): void {
+        this.observers = [];
+    }
 }

@@ -10,9 +10,9 @@
         "member-access": [
             true,
             "check-accessor",
-            "check-constructor",
             "check-parameter-property"
-        ]
+        ],
+        "arrow-parens": false
     },
     "rulesDirectory": []
 }

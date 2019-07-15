@@ -30,4 +30,8 @@ export class TypedEvent<T> implements ITypedEvent<T> {
     public raise(data: T): void {
         this.observerStorage.each((o) => o(data));
     }
+
+    public dispose(): void {
+        this.observerStorage.reset();
+    }
 }
